@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #385144;
+    --secondary-color: #F8F5F2;
+    --main-font: "Bricolage Grotesque", sans-serif;
+    --secondary-font: "Instrument Sans", sans-serif;
+}
+
+body {
+    background-image: url("../assets/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-family: var(--main-font);
+    font-size: 5em;
+    font-weight: normal;
+    letter-spacing: 5px;
+}
+
+p,
+h2 {
+    font-family: var(--secondary-font);
+    font-weight: normal;
+    font-size: 2em;
+    margin: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #F8F5F2;
+}
+
+.landing-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(248, 245, 242, .5);
+}
+
+.landing-section {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+button {
+    font-family: var(--secondary-font);
+    background-color: var(--main-color);
+    color: white;
+    padding: 20px 50px;
+    font-size: 1.25em;
+    border-radius: 20PX;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: rgb(56, 81, 68, .8);
+    transition: 500ms;
+    cursor: pointer;
+}
+
+button:active {
+    filter: brightness(.9);
+}

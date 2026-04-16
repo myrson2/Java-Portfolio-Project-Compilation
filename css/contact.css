@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #385144;
+  --secondary-color: #F8F5F2;
+  --main-font: "Bricolage Grotesque", sans-serif;
+  --secondary-font: "Instrument Sans", sans-serif;
+}
+
+body {
+  background-color: var(--secondary-color);
+}
+
+html {
+  scroll-behavior: smooth;
+  transition: all 1s;
+}
+
+a {
+  text-decoration: none;
+  color: #F8F5F2;
+}
+
+h1 {
+  font-family: var(--main-font);
+  font-size: 5em;
+  font-weight: normal;
+  letter-spacing: 5px;
+}
+
+
+nav {
+  font-family: var(--main-font);
+  padding: 20px 0;
+  background-color: var(--main-color);
+  height: 100vh;
+  width: 100px;
+  position: fixed;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+.nav-bar {
+  height: 80vh;
+  display: flex;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2em;
+}
+
+.list {
+  padding: 20px;
+}
+
+a:hover {
+  background-color: rgba(53, 50, 50, 0.5);
+}
+
+.contact p {
+  font-size: 1em;
+  text-align: center;
+}
+
+.contact-page {
+    padding: 200px 150px;
+}
+
+.contact-page h1, .contact-page h2 {
+    font-family: var(--main-font);
+}
+
+ .contact-page h2 {
+    font-size: 2em;
+    font-weight: bold;
+ }
+
+ .contact-page p {
+    font-size: 1.25em;
+    font-family: var(--secondary-font);
+    font-weight: normal;
+ }
+
+.text {
+    margin: 20px 0;
+}
+
+.contact-form-article {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.card {
+    padding: 50px;
+    border-radius: 40px;
+    border: 1px solid black;
+    background-color: #385144;
+    color: #F8F5F2;
+}
+
+.myImg img {
+    border-radius: 20px;
+    border: 1px solid #F8F5F2;
+    object-fit: cover;
+}
+
+.infos {
+    display: flex;
+    gap: 50px;
+    align-items: end;
+}
+
+.contact-info {
+    display: flex;
+}
+
+.socials img{
+    border-radius: 50px;
+    border: 3px solid var(--secondary-color);
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.socials img:hover {
+    transition: all .6s;
+    filter: brightness(.8);
+}
+
+.socials a:hover {
+  background-color: transparent;
+}
+
+.personal-info {
+    margin-bottom: 30px;
+}
+
+.personal-info div {
+  margin: 20px 0;
+}
+
+.contact-form {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.myName p {
+  opacity: .6;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+  width: auto;
+}
+
+

@@ -15,6 +15,7 @@
 
 body {
     font-size: 16px;
+    user-select: none;
 }
 
 h1 {
@@ -22,6 +23,11 @@ h1 {
     font-size: clamp(2.5rem, 8vw + 1rem, 5rem);
     font-weight: normal;
     letter-spacing: 5px;
+    background-color: var(--main-color);
+    padding: 20px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    border-radius: 20px;
 }
 
 p,
@@ -53,6 +59,7 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    filter: brightness(.85);
     opacity: .5;
 }
 
@@ -131,6 +138,6 @@ a {
 @media (max-width: 720px) {
     p, h2, h1 {
         text-align: justify;
-        margin: 0;
+        margin: 10px 0;
     }
 }

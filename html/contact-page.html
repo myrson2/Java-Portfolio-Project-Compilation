@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="/css/contact.css">
     <title>Contacts</title>
 </head>
 <body>
@@ -11,7 +11,7 @@
       <div class="list image">
         <a href="#" title="Home">
           <img
-            src="assets/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+            src="/assets/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
             alt=""
             width="40"
             height="40"
@@ -19,15 +19,15 @@
         </a>
       </div>
       <aside class="nav-bar">
-        <a href="midterm-page.html" title="Midterms">
+        <a href="/html/midterm-page.html" title="Midterms">
           <div class="list">M</div>
         </a>
         <a href="" title="Finals"> <div class="list">F</div> </a>
       </aside>
       <div class="contact">
-        <a href="contact-page.html" title="Contacts">
+        <a href="/html/contact-page.html" title="Contacts">
           <img
-            src="assets/contacts_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+            src="/assets/contacts_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
             width="40"
             height="40"
           />
@@ -43,14 +43,14 @@
 
                     <div class="infos">
                         <div class="myImg">
-                            <img src="assets/MyImage" alt="" width="400" height="400">
+                            <img src="/assets/MyImage" alt="" width="400" height="400">
                         </div>
 
                         <div class="contact-details">
                             <div class="socials">
-                                <a href=""> <img src="assets/facebook_logo_icon_147291.png" alt="Facebook" srcset="" width="80" height="80"></a>
-                                <a href=""> <img src="assets/github-logo_icon-icons.com_73546.png" alt="Github" srcset="" width="80" height="80"> </a>
-                                <a href=""> <img src="assets/linkedin_icon-icons.com_65929.png" alt="LinkedIn" srcset="" width="80" height="80"> </a>
+                                <a href="https://www.facebook.com/myrson.beros.7" target="_blank"> <img src="/assets/facebook_logo_icon_147291.png" alt="Facebook" srcset="" width="80" height="80"></a>
+                                <a href="https://github.com/myrson2" target="_blank"> <img src="/assets/github-logo_icon-icons.com_73546.png" alt="Github" srcset="" width="80" height="80"> </a>
+                                <a href="" target="_blank"> <img src="/assets/linkedin_icon-icons.com_65929.png" alt="LinkedIn" srcset="" width="80" height="80"> </a>
                             </div>
                             <div class="personal-info">
                                 <div class="info1"> 
@@ -81,13 +81,19 @@
                 <form action="">
                     <div>
                         <label for="Name"></label>
-                        <input type="text" name="Name" id="Name">
+                        <input type="text" name="Name" id="Name" placeholder="Name" required>
                     </div>
                     <div>
                         <label for="Email"></label>
-                        <input type="email" name="Email" id="Email">
+                        <input type="email" name="Email" id="Email" placeholder="Email" required>
                     </div>
-                    <div><textarea name="message"></textarea></div>
+                    <div>
+                        <label for="subject"></label>
+                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                    </div>
+                    <div>
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                    </div>
                     <button type="submit"> Submit </button>
                 </form>
             </section>

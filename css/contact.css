@@ -104,9 +104,11 @@ a:hover {
 .card {
     padding: 50px;
     border-radius: 40px;
-    border: 1px solid black;
-    background-color: #385144;
-    color: #F8F5F2;
+    border: 10px solid var(--main-color);
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    filter: brightness(.95);
+    max-width: 1200px;
 }
 
 .myImg img {
@@ -152,22 +154,39 @@ a:hover {
 .contact-form {
   flex: 1;
   padding: 20px;
-  text-align: center;
+  width: 100%;
 }
 
 .myName p {
   opacity: .6;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+input, textarea, button {
+  display: block;
+  font-family: var(--secondary-font);
+  width: 100%;
+  margin: 10px 0;
+  padding: 0 20px;
+  font-size: 1.25em;
 }
 
-input {
-  width: auto;
+input, button {
+  height: 50px;
 }
 
+textarea {
+  height: 250px;
+  padding: 20px 20px;
+}
+
+button {
+  border: 1px solid var(--main-color);
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+}
+
+button:hover {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+}
 

@@ -4,9 +4,10 @@
     --main-color: #0D1117;
     --secondary-color: #58A6FF;
     --main-font: "Inter", sans-serif;
+    --light-mode: #C9D1D9;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -14,6 +15,7 @@
 
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body.dark {
@@ -25,12 +27,13 @@ body.dark {
 
 main {
     margin: 0 auto;
-    width: 75%; /* Or a fixed width like 1200px */
+    width: 75%;
+    /* Or a fixed width like 1200px */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 95vh;
+    min-height: 95vh;
 }
 
 a {
@@ -39,16 +42,13 @@ a {
 }
 
 header {
-    width: min(80%, 600px);
+    width: 70%;
     margin: 0 auto;
+    display: block;
 }
 
 header .container-1 {
-   text-align: center;
-}
-
-header {
-    padding: 20px;
+    text-align: center;
 }
 
 header h1 {
@@ -56,7 +56,7 @@ header h1 {
 }
 
 header p {
-    font-weight: 100;
+    font-weight: 400;
 }
 
 header img {
@@ -67,12 +67,12 @@ header img {
     border-radius: 50%;
     margin: 0 auto;
 }
- 
+
 .container-2 {
-    margin-top: 50px;
+    margin: 50px auto;
 }
 
-.container-2 ul{
+.container-2 ul {
     list-style-type: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -80,35 +80,90 @@ header img {
     place-items: center;
 }
 
-li a{
+li a {
     border: 1px solid var(--secondary-color);
     padding: 15px 30px;
     color: var(--secondary-color);
 }
 
-li.active a {
+a.active {
     background-color: var(--secondary-color);
     color: white;
 }
 
-li a:not(.active):hover {
+li a:hover:not(.active) {
     background-color: rgb(88, 166, 255, .2);
     color: white;
 }
 
 footer {
-    width: 75%;
+    display: flex;
+    flex-wrap: nowrap;
+    place-content: center;
+    width: 100%;
     margin: 0 auto;
-    text-align: center;
     position: sticky;
-    bottom: 20px;
+    gap: calc(5% + 1rem);
+    background-color: var(--main-color);
+    padding: 14px;
+    bottom: 0;
 }
 
 footer p {
-    display: inline-block;
-    margin: 0 50px;
+    font-size: clamp(12px, .8vw, 1rem);
 }
 
 p a:hover {
     color: var(--secondary-color);
+}
+
+#contact {
+     display: none;
+}
+.contact {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact .aside-child-1 {
+    text-align: center;
+}
+
+.aside-child-1 h1 {
+    font-size: 3rem;
+}
+
+.aside-child-2 {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.aside-child-2 .card-1,
+.card-2,
+.card-3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 20px;
+}
+
+.back-button {
+    position: absolute;
+    top: 50px;
+}
+
+.back-button a:hover {
+    color: #58A6FF;
+}
+
+.fa-github-alt {
+    font-weight: bolder;
+    font-size: 1.5rem;
 }

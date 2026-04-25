@@ -120,6 +120,7 @@ p a:hover {
 
 #contact-section {
      display: none;
+     transition: all ease-in-out 0s;
 }
 
 .contact-section {

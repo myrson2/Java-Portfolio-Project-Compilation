@@ -33,7 +33,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 95vh;
+    min-height: 100vh;
 }
 
 a {
@@ -44,7 +44,7 @@ a {
 header {
     width: 70%;
     margin: 0 auto;
-    display: block;
+    display: none;
 }
 
 header .container-1 {
@@ -53,6 +53,7 @@ header .container-1 {
 
 header h1 {
     font-size: 3rem;
+    margin-bottom: 20px;
 }
 
 header p {
@@ -102,7 +103,7 @@ footer {
     place-content: center;
     width: 100%;
     margin: 0 auto;
-    position: sticky;
+    position: fixed;
     gap: calc(5% + 1rem);
     background-color: var(--main-color);
     padding: 14px;
@@ -117,10 +118,11 @@ p a:hover {
     color: var(--secondary-color);
 }
 
-#contact {
+#contact-section {
      display: none;
 }
-.contact {
+
+.contact-section {
     width: 75%;
     margin: 0 auto;
     display: flex;
@@ -128,7 +130,7 @@ p a:hover {
     justify-content: center;
 }
 
-.contact .aside-child-1 {
+.contact-section .aside-child-1 {
     text-align: center;
 }
 
@@ -166,4 +168,167 @@ p a:hover {
 .fa-github-alt {
     font-weight: bolder;
     font-size: 1.5rem;
+}
+
+/* midterm section */
+
+#midterm-section {
+    display: block;
+    min-height: 100vh;
+}
+
+.midterm-section {
+    width: inherit;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+}
+
+.midterm-section .midterm-header {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.midterm-header h1 {
+    letter-spacing: 5px;
+    font-size: 2.5rem;
+}
+
+hr {
+    width: 100%;
+    margin: 20px auto;
+    border: 1px solid var(--secondary-color);
+}
+
+.midterm-section nav {
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+ul li {
+    padding: 0;
+}
+
+li button {
+    padding: 10px 15px;
+    font-size: .75rem;
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+    color: white;
+    border-radius: 50px;
+}
+
+button.active {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+button:hover:not(.active) {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* midterm exam */
+.main-contents {
+    /* border: 1px solid white; */
+    width: 100%;
+    margin: 0 auto;
+}
+
+.midterm-exam, .midterm-activity, .midterm-seatwork {
+    margin: 50px 0;
+    /* border: 1px solid black; */
+}
+
+.header-exam {
+    text-align: justify;
+}
+
+.header-exam h1, .midterm-activity h1, .midterm-seatwork h1 {
+    text-align: none;
+    font-size: 2rem;
+    letter-spacing: 5px;
+}
+
+.reflection-exam {
+    text-align: justify;
+    border: 1px solid white;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px 0;
+    background-color: rgb(255, 255, 255, .1);
+}
+
+.reflection-exam p {
+    text-indent: 2rem;
+}
+
+/* activities */
+
+.activity-list {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.activity {
+    text-align: justify;
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.activity-list img  {
+    height: 150px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.pdf-container {
+    border: 1px solid var(--secondary-color);
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: rgb(88, 166, 255, .75);
+    font-weight: bold;
+}
+
+/* seatwork section  */
+
+.seatwork-list {
+     max-width: 100%;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.seatwork {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.seatwork .reflection-container {
+    flex: 1;
+}
+.seatwork-list img {
+    height: 150px;
+    border-radius: 15px;
+}
+
+.reflection-container .pdf-container {
+    margin-top: 20px;
+    width: 150px;
 }

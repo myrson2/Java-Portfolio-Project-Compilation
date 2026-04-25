@@ -32,25 +32,35 @@ function final_home() {
     alert("Not Implemented");
 }
 
-const allButtons = nav.querySelectorAll('button');
+// 1. Target the specific articles, not the parent container
+const allButtons = document.querySelectorAll('nav ul li button');
 const contentSections = document.querySelectorAll('.main-contents article');
 
 nav.addEventListener('click', e => {
     const button = e.target.closest('button');
     if (!button) return;
 
+    // UI Update: Move the 'active' class to the clicked button
     allButtons.forEach(btn => btn.classList.remove('active'));
     button.classList.add('active');
 
-    // 2. Optimized Filtering Logic
-    const filterType = button.id; 
+    // 2. Logic to match Button IDs with Section IDs
+    const filterType = button.id; // e.g., 'quizzes', 'activities', 'seatwork'
 
     contentSections.forEach(section => {
         if (filterType === 'all') {
             section.style.display = 'block';
         } else {
-           
-            const filterKeyword = filterType.replace(/ies$/, 'y').replace(/s$/, '');
+            /* Normalize the keyword:
+               - If button is 'quizzes', it matches 'quiz' in #midterm-quiz
+               - If button is 'activities', it matches 'activity' in #midterm-activity
+               - If button is 'seatwork', it remains 'seatwork'
+            */
+            const filterKeyword = filterType === 'quizzes' 
+                ? 'quiz' 
+                : filterType.replace(/ies$/, 'y').replace(/s$/, '');
+            
+            // Check if the article ID (e.g., "midterm-seatwork") contains the keyword
             const isMatch = section.id.includes(filterKeyword);
             section.style.display = isMatch ? 'block' : 'none';
         }
